@@ -12,6 +12,7 @@ import {
 } from "@/components/ui/sheet";
 import { MainNav } from "@/components/main-nav";
 import { MobileNav } from "@/components/mobile-nav";
+import { ThemeToggle } from "@/components/theme-toggle";
 import { siteConfig } from "@/lib/site";
 
 export function SiteHeader() {
@@ -51,6 +52,7 @@ export function SiteHeader() {
 				<MainNav className="hidden md:flex" />
 
 				<div className="ml-auto flex items-center gap-2">
+					<ThemeToggle />
 					<Button
 						variant="outline"
 						size="sm"

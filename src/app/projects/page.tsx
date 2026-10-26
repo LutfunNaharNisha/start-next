@@ -24,7 +24,8 @@ const projects = [
 	{
 		slug: "forms",
 		title: "Forms & validation",
-		summary: "Server Actions with typed form state and inline field errors.",
+		summary:
+			"Server Actions with typed form state and inline field errors.",
 		status: "Planned",
 	},
 	{
@@ -37,7 +38,7 @@ const projects = [
 		slug: "theme",
 		title: "Dark mode",
 		summary: "Theme toggle with next-themes and CSS variables.",
-		status: "Planned",
+		status: "Done",
 	},
 ];
 

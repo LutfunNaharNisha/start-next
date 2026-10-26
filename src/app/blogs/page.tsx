@@ -1,8 +1,9 @@
 import type { Metadata } from "next";
 
 import { BlogList } from "@/components/blog-list";
+import { FeaturedPost } from "@/components/featured-post";
 import { Badge } from "@/components/ui/badge";
-import { blogs } from "@/lib/blogs";
+import { blogs, getFeaturedPost } from "@/lib/blogs";
 
 export const metadata: Metadata = {
 	title: "Blogs",
@@ -10,6 +11,8 @@ export const metadata: Metadata = {
 };
 
 export default function BlogsPage() {
+	const featured = getFeaturedPost();
+
 	return (
 		<div className="mx-auto w-full max-w-6xl px-6 py-16">
 			<header className="mb-10 flex flex-col gap-4">
@@ -23,6 +26,10 @@ export default function BlogsPage() {
 					Notes on building for the web, design and productivity.
 				</p>
 			</header>
+
+			<div className="mb-12">
+				<FeaturedPost blog={featured} />
+			</div>
 
 			<BlogList blogs={blogs} />
 		</div>
